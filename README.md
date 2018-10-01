@@ -13,7 +13,6 @@ This repository holds code used to scrap and clean almost 7 years, 2010-12-01 to
  <br>}<br>
 and a cleaned pickled data table. There were over 500 uniquely name incidents. Therefore the focus of the cleaning has been giving to 6 categories of incidents: **lost property**, **theft**, **assault**, **burglary**, and **mental health** related. The data is as follows:
 
-
 | Index  | Incident | Comments  | Reported | Coordinates|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 0  | lost  |woman reports losing a canon power shot digita...|2010-07-01 12:42:00|(41.7892236, -87.5980197)|
@@ -22,18 +21,11 @@ and a cleaned pickled data table. There were over 500 uniquely name incidents. T
 ### Motivation
 Wanted to familiarize myself w/ webscraping (scrapy), text data wrangling (pandas), and interactive web mapping (folium).
 
-
-There were a few reason why this project has interested me
-- the process of gentrification
-- UChicago's increase of police personal (one of the largest private police forces in the country)
-- I walk my [pup](https://drive.google.com/file/d/1pmwvG7DrPzkTayweOsUlh6lwcWWynhKf/view?usp=sharing) late at night 
-
-Speaking with locals about the rapid change that the neighboorhood has experience over the last decade and a Living in the surrounding area and receiving reportings made me wondering if there is some preferencing 
-
 ## Questions
-- [ ] Has crime decrease through?
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
-
+- [ ] Is there an overall crime trend? Constant/increasing/decreasing?
+- [ ] And what about specific incidents?
+- [ ] Are there "hot" areas of crime?
+- [ ] How does UChicago campus area compare to the rest of the area?
+- [ ] Is daytime safer than nighttime?
 
 ## Observations
