@@ -1,6 +1,7 @@
 # uchicago-crime-analysis
 ## Info
-This repository holds code used to scrap and clean 8 years, 2010-07-01 to 2018-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area). The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
+This repository holds code used to scrap and clean 8 years, 2010-07-01 to 2018-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area).<br> The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
+
 <br> The data folder contains two main files: a raw data json file containing the following format<br>
  {<br>
  "Incident": "Lost Property",<br>
@@ -41,7 +42,8 @@ Recalling that 2010 has half a year of reporting one can assume that the number 
 Check out 2018's in the meantime [Nbviewer data interactive](https://nbviewer.jupyter.org/github/aaron-ortega/uchicago-crime-analysis/blob/master/data_interactive.ipynb)
 
 - **Assault** reports have increased over the last past three years.
-- **Burglary** seems 
+- **Burglary** was bad in 2010 as it tops over the other years and with only six months worth of data (ouch!) 
+- **Lost** property happens and it won't ever stop
 - **Theft** has been on the decline these past years, but we won't know if the trend will continue for 2018. 
 - A third of **Mental Health** incidents where reported by the University's Student Counseling Service
 
