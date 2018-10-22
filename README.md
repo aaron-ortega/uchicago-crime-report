@@ -1,6 +1,6 @@
 # uchicago-crime-analysis
 ## Info
-This repository holds code used to scrap and clean almost 7 years, 2010-12-01 to 2017-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area). The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
+This repository holds code used to scrap and clean almost 7 years, 2010-07-01 to 2017-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area). The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
 <br> The data folder contains two main files: a raw data json file containing the following format<br>
  {<br>
  "Incident": "Lost Property",<br>
@@ -22,10 +22,11 @@ and a cleaned pickled data table. There were over 500 uniquely name incidents. T
 Wanted to familiarize myself w/ webscraping (scrapy), text data wrangling (pandas), and interactive web mapping (folium).
 
 ## Questions
-- [ ] Is there an overall crime trend? Constant/increasing/decreasing?
+- [x] Is there an overall crime trend? Constant/increasing/decreasing?
 - [ ] And what about specific incidents?
 - [ ] Are there "hot" areas of crime?
 - [ ] How does UChicago campus area compare to the rest of the area?
 - [ ] Is daytime safer than nighttime?
 
 ## Observations
+![](https://raw.githubusercontent.com/aaron-ortega/uchicago-crime-analysis/blob/master/plots/total_occurred_per_incident.pdf?raw=true)
