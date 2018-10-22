@@ -2,7 +2,7 @@
 ## Info
 This repository holds code used to scrap and clean 8 years, 2010-07-01 to 2018-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area).<br> The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
 
-<br> The data folder contains two main files: a raw data json file containing the following format<br>
+The data folder contains two main files: a raw data json file containing the following format<br>
 
  {<br>
  "Incident": "Lost Property",<br>
