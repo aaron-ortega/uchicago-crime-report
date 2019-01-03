@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for crimeMap project
+# Scrapy settings for uchicagoCrime project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,17 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'crimeMap'
+BOT_NAME = 'uchicagoCrime'
 
-SPIDER_MODULES = ['crimeMap.spiders']
-NEWSPIDER_MODULE = 'crimeMap.spiders'
+SPIDER_MODULES = ['uchicagoCrime.spiders']
+NEWSPIDER_MODULE = 'uchicagoCrime.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'crimeMap (+http://www.yourdomain.com)'
+#USER_AGENT = 'uchicagoCrime (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'crimeMap.middlewares.CrimemapSpiderMiddleware': 543,
+#    'uchicagoCrime.middlewares.UchicagocrimeSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'crimeMap.middlewares.CrimemapDownloaderMiddleware': 543,
+#    'uchicagoCrime.middlewares.UchicagocrimeDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'crimeMap.pipelines.CrimemapPipeline': 300,
+#    'uchicagoCrime.pipelines.UchicagocrimePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
