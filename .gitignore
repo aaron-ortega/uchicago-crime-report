@@ -113,7 +113,10 @@ dmypy.json
 
 # excluded directories
 /google-maps-api
+/scratch
 
 # mac files
 .DS_Store
 *.swp
+
+
