@@ -1,11 +1,19 @@
 import scrapy
 
 class crimeLog(scrapy.Spider):
+    
+    # Settings
     name = 'crimeLog'
     AUTOTHROTTLE_ENABLED = True
     host_name = 'https://incidentreports.uchicago.edu/'
-    start_urls = ['https://incidentreports.uchicago.edu/incidentReportArchive.php?startDate=12%2F29%2F2018&endDate=01%2F01%2F2019',]
-
+    file_path = '/Users/aaron/Documents/github/uchicago-crime-report/logs/scrape_path.log'
+    
+    # Read time range for scrape
+    with open(file_path, 'r') as f:
+        url = f.readlines()[-1]
+    
+    # Start
+    start_urls = [f'{url}',]
 
     def parse(self,response):
         item_names = 'Incident,Location,Reported,Occurred,Comments,Disposition,UCPD_ID'.split(',')
