@@ -211,7 +211,7 @@ if "__main__" == __name__:
 	
 	# Save cleaned data
 	df.reset_index(drop=True, inplace=True)
-	df.to_csv(f'data/test_data-{today}.csv', index=False)
+	df.to_csv(f'data/clean_data-{today}.csv', index=False)
 
 	# create tmp file to update scrape url
 	one_day = pd.Timedelta(1, 'D')
