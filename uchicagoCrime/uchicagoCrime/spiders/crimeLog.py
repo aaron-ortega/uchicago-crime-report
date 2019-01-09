@@ -30,7 +30,6 @@ class crimeLog(scrapy.Spider):
             yield dict(zip(item_names, data))
             
         next_page = response.xpath('//ul[@class="pager"]/li[@class="next "]/a/@href').extract()
-        print('#####################\n', next_page, '#####################')
         try:
             url = crimeLog.host_name + next_page[0]
             yield scrapy.Request(url, callback=self.parse)
