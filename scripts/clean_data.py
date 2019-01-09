@@ -98,11 +98,12 @@ def address_to_coordinates(address):
 	If location found: a tuple containing the latitude & longitude
 	If not: an integer code (user defined)
 	'''
-	
-	address = re.sub(r' \(.*\)', '', address) # remove parenthetical info
-	address = re.sub(r' at|and ', ' & ', address) # fix intersection
-	
+		
 	try:
+		
+		address = re.sub(r' \(.*\)', '', address) # remove parenthetical info
+		address = re.sub(r' at|and ', ' & ', address) # fix intersection
+		
 		# Check if address is between streets
 		# E.g. (52nd St. between Greenwood & University)
 		pattern = re.findall(r'(\w.*(?= between)) between ((?<=between )\w.*(?= &)) & ((?<=\& )\w.*)', address)[0]
@@ -128,6 +129,12 @@ def address_to_coordinates(address):
 		# Server timeout value if any (check later)
 		log1.info(f"{timeout}::{address}")
 		return pd.np.nan, pd.np.nan
+	
+	except TypeError as err:
+		# Nan value found probaly from
+		# "No reports this date"
+		log1.info(f"{err}::{address}")
+		return pd.np.nan, pd.np.nan
 		 
 	except Exception as err:
 		log1.info(f"Unexpected error: {err} for {address}")
@@ -142,7 +149,7 @@ def set_logger(logger_name, log_file, level=logging.INFO):
 	logger.setLevel(level)
 	
 	file_handler = logging.FileHandler(log_file)
-	formatter = logging.Formatter('%(levelname)s::%(name)s::%(message)s')
+	formatter = logging.Formatter('%(asctime)s::%(levelname)s::%(name)s::%(message)s')
 	file_handler.setFormatter(formatter)
 	logger.addHandler(file_handler)
 
@@ -164,10 +171,8 @@ if "__main__" == __name__:
 	log2 = logging.getLogger('approx-date')
 	
 	# Import data
-	#path = 'data/raw_crimeLogData.json'
-	path = glob('data/*.json')[-1]
+	path = glob('data/raw/*.json')[-1]
 	df = pd.read_json(path)
-	#df.rename(columns={'Occured':'Occurred'}, inplace=True)
 	
 	# Drop nan and useless columns
 	del df['Disposition']
@@ -204,14 +209,14 @@ if "__main__" == __name__:
 	
 	# Add latitude and longitude columns
 	tqdm.pandas(desc="Geocoding") # Add CL progress bar
-	df[['latitude', 'longitude']] = df['Location'].progress_apply(address_to_coordinates).apply(pd.Series)
+	df[['latitude', 'longitude']] = df['Location'].progress_apply(address_to_coordinates).apply(pd.Series)	
 	assert types.is_float_dtype(df['latitude'])
 	assert types.is_float_dtype(df['longitude'])
 	print('Geocoding: Done')
 	
 	# Save cleaned data
 	df.reset_index(drop=True, inplace=True)
-	df.to_csv(f'data/clean_data-{today}.csv', index=False)
+	df.to_csv(f'data/processed/{today}.csv', index=False)
 
 	# create tmp file to update scrape url
 	one_day = pd.Timedelta(1, 'D')
@@ -235,3 +240,7 @@ if "__main__" == __name__:
 	path_update.update()
 	
 	print('#### Done ####')
+	
+	
+	
+	
