@@ -38,7 +38,7 @@ Wanted to familiarize myself w/ webscraping (scrapy), text data wrangling in pan
 
 Recalling that 2010 has half a year of reporting one can assume that the number of incidents would be comparable to those in 2011 and 2012. After 2012 it appears that the total number of incidents has gone down and remained somewhat constant. Whether this is due to less reporting or enhanced security it cannot be said. Now what about specific incident trends?
 
-![](./plots/total_incidents_per_year.png)
+<img src="./plots/total_incidents_per_year.png" width="650" height="450">
 
 ## More in campus or outside? Check interactive cluster (coming soon)
 Check out 2018's in the meantime [Nbviewer data interactive](https://nbviewer.jupyter.org/github/aaron-ortega/uchicago-crime-analysis/blob/master/data_interactive.ipynb)
@@ -59,5 +59,5 @@ During incident reports, an approximation on the "time of incident" is usually g
 
 Finally, here is a breakdown by day and surprisingly the weekend is less eventful.
 
-![](./plots/total_incidents_per_dayofweek.png)
+<img src="./plots/total_incidents_per_dayofweek.png" width="650" height="450">
 
