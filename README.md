@@ -1,8 +1,8 @@
 # uchicago-crime-report
 ## Info
-This repository holds code used to scrap and clean 8 years, 2010-07-01 to 2018-08-21, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area).<br> The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
+This repository holds code used to scrap and clean 8+ years, 2010-07-01 to 2019-01-05, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area).<br> The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
 
-The data folder contains two main files: a raw data json file containing the following format<br>
+The data folder contains raw and processed data: raw data is in json file containing the following format<br>
 
  {<br>
  "Incident": "Lost Property",<br>
@@ -14,19 +14,20 @@ The data folder contains two main files: a raw data json file containing the fol
  "UCPD_ID": "W0731"
  <br>}
  
-and a cleaned csv data table. There were over 500 uniquely name incidents. Therefore the focus of the cleaning has been giving to 6 categories of incidents: **lost property**, **theft**, **assault**, **burglary**, and **mental health** related. 
+and the processed csv data. There were over 500 uniquely name incidents. Therefore the focus of the cleaning has been giving to 7 categories of incidents: **assault**, **battery**, **burglary**, **lost property**, **mental health**, **robbery**, and **theft** related. 
 
 **Note**: Having mental health issues is in no way a crime. It wasn't after seeing the data did I noticed mental health incidents were being reported. It is included in order to increase awareness. 
 
-The data is as follows:
+The data is as follows: <br>
 
-| Index  | Incident | Comments  | Reported | Coordinates|
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| 0  | lost  |woman reports losing a canon power shot digita...|2010-07-01 12:42:00|(41.7892236, -87.5980197)|
-| 5  | lost  |staff member reports losing wallet containing ...|2010-07-01 23:09:00|(41.66861859999999, -87.7841447)|
+
+| Comments | Incident | Location  | Occurred | Reported | Tag | approx_occurred | latitude | longitude | day_night |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 3 unknown suspects struck victim with fists... | robbery / vehicle hijacking | 5558 s kimbark | 3/18/17 4:05 PM | 2017-03-18 16:07:00 | robbery | 2017-03-18 16:05:00 | 41.66861859999999 | -87.7841447 | 1 |
+| staff member reports losing wallet containing... | lost property | 5810 s university | 9/19/18 10:22 PM | 9/19/18 11:12 PM | lost | 2018-09-19 22:22:00| 41.66861859999999 | -87.7841447 | 0 |
 
 ### Motivation
-Wanted to familiarize myself w/ webscraping (scrapy), text data wrangling in pandas, and interactive web mapping (folium).
+Wanted to familiarize myself w/ webscraping (scrapy), interactive web mapping (folium), and Tableau.
 
 ## Questions
 - [x] Is there an overall crime trend? Constant/increasing/decreasing?
