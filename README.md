@@ -14,11 +14,15 @@ The data folder contains raw and processed data: raw data is in json file contai
  "UCPD_ID": "W0731"
  <br>}
  
-and the processed csv data. There were over 500 uniquely name incidents. Therefore the focus of the cleaning has been giving to 7 categories of incidents: **assault**, **battery**, **burglary**, **lost property**, **mental health**, **robbery**, and **theft** related. 
+and the processed csv data. The cleaning procedure included 
+- Geocoding all incident locations
+- Approximating time of incident since certain incidents are reported as a time range. Incident occurring w/ a range of six hours where deemed appropriate approx
+- Tagging seven crimes of interest: **assault**, **battery**, **burglary**, **lost property**, **mental health**, **robbery**, and **theft**
+- Labeling if incident occurred during day or night 
 
 **Note**: Having mental health issues is in no way a crime. It wasn't after seeing the data did I noticed mental health incidents were being reported. It is included in order to increase awareness. 
 
-The data is as follows: <br>
+The data sample: <br>
 
 
 | Comments | Incident | Location  | Occurred | Reported | Tag | approx_occurred | latitude | longitude | day_night |
