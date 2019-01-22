@@ -1,5 +1,7 @@
 # uchicago-crime-report
-Notebooks where used to explore data and scripts perform an automated ETL process which should update the data every week. The tools used for this project are python (pandas, geopy, folium, jupyter notebook, seaborn) and Tableau.
+Notebooks were used to explore data and scripts perform an automated ETL process which should update the data every week. The tools used for this project
+- Python (pandas, geopy, folium, jupyter notebook, seaborn)
+- Tableau
 
 ## Info
 This repository holds code used to scrap and clean 8+ years, 2010-07-01 to 2019-01-05, worth of crime and fire related incidents reported by the University of Chicago Police Department. The patrol area is between 37th and 64th streets and Cottage Grove Avenue to Lake Shore Drive (Kenwood/HydePark/Woodlawn area).<br> The public data can be found here -> [Daily Crime/Fire Log](https://incidentreports.uchicago.edu/)
@@ -18,7 +20,7 @@ The data folder contains raw and processed data: raw data is in json file contai
  
 and the processed csv data. The cleaning procedure included 
 - Geocoding all incident locations
-- Approximating time of incident since certain incidents are reported as a time range. Incident occurring w/ a range of six hours where deemed appropriate approx
+- Approximating time of incident since certain incidents are reported as a time range. Incident occurring within a range of six hours where timed approximated
 - Tagging seven crimes of interest: **assault**, **battery**, **burglary**, **lost property**, **mental health**, **robbery**, and **theft**
 - Labeling if incident occurred during day or night 
 
